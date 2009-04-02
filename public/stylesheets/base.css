@@ -1,6 +1,6 @@
 body{font-family:"Lucida Sans","Trebuchet MS", Helvetica, Arial, Verdana, sans-serif}
 body,html{border-width:0px;margin:0px;padding:0px}
-h1,h2,h3{margin-top:0;}
+h1,h2,h3{margin-top:0;font-weight:normal;}
 *{outline:none;}
 .clear{clear:both;}
 .notice{background:#f4fff4;color:#669966;border-color:#aaccaa;}

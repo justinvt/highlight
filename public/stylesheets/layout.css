@@ -4,7 +4,7 @@ input{margin:0 auto;padding:0.1 0.2em;width:80%;text-align:center;}
 .content{width:300px;padding:10px;border:solid 1px #ccc;}
 .screenshot{width:640px;height:480px;border:solid 10px #000;position:relative;}
 
-.tools {padding:5px;margin:0;width:auto;}
+.tools {padding:5px 10px;margin:0;width:auto;}
 
 .logo {color:#ff0;}
 .title{float:right;color:#fff;}

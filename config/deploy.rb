@@ -1,7 +1,7 @@
 set :application, "highlight"
 set :rails_env, "production"
 
-set :repository,  "git@github.com:justinvt/highline.git"
+set :repository,  "git://github.com/justinvt/highlight.git"
 
 set :scm_user, "nook"
 set :scm_verbose, true
@@ -38,7 +38,7 @@ set :ec2onrails_config, {
   # This does not affect the automatic backup of your MySQL db to S3, it's
   # just for manually archiving a db snapshot to a different bucket if 
   # desired.`
-  :archive_to_bucket => "nooknack_archive",
+  :archive_to_bucket => "highlight_archive",
   :archive_to_bucket_subdir => "ec2db/#{Time.new.strftime('%Y-%m-%d--%H-%M-%S')}",
   
   # Set a root password for MySQL. Run "cap ec2onrails:db:set_root_password"
@@ -47,7 +47,7 @@ set :ec2onrails_config, {
   # connections on the public network interface (you should block the MySQL
   # port with the firewall anyway). 
   # If you don't care about setting the mysql root password then remove this.
-  :mysql_root_password => "yqcdkju2k2",
+  :mysql_root_password => "h1ghl1ght",
   
   # Any extra Ubuntu packages to install if desired
   # If you don't want to install extra packages then remove this.
@@ -56,7 +56,7 @@ set :ec2onrails_config, {
   # Any extra RubyGems to install if desired: can be "gemname" or if a 
   # particular version is desired "gemname -v 1.0.1"
   # If you don't want to install extra rubygems then remove this
-  :rubygems => [ "amatch", "chronic","liquid", "hpricot", "BlueCloth", "RedCloth", "ferret", "rails -v 2.1.0"],
+  :rubygems => ["tzinfo", "", "hpricot", "BlueCloth", "RedCloth", "ferret", "rails -v 2.3.2"],
   
   # Set the server timezone. run "cap -e ec2onrails:server:set_timezone" for 
   # details
@@ -78,7 +78,7 @@ set :ec2onrails_config, {
   # Set an email address to forward admin mail messages to. If you don't
   # want to receive mail from the server (e.g. monit alert messages) then
   # remove this.
-  :admin_mail_forward_address => "admin@nooknack.com",
+  :admin_mail_forward_address => "admin@highlig.ht",
   
   # Set this if you want SSL to be enabled on the web server. The SSL cert 
   # and key files need to exist on the server, The cert file should be in

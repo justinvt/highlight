@@ -5,7 +5,7 @@ module ErrorLogger
     DbError.create(
     :content=>exception.inspect,
     #:user_id=> (logged_in? ? controller.current_user.id.to_s : nil),
-    :user_name=> (logged_in? ? self.current_user.name : "anonymous").to_s,
+    #:user_name=> (logged_in? ? self.current_user.name : "anonymous").to_s,
     :file => exception.methods.include?("file_name") ? exception.file_name.to_s : nil, 
     :message=>  exception.message.to_s,
     :line=> exception.methods.include?("line_number") ? exception.line_number.to_s : nil,

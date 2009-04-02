@@ -22,23 +22,23 @@ var image_prefix=null;
 var view_panel=new Object();
 view_panel['height']=480;
 view_panel['width']=640;
-view_panel['top']=100;
-view_panel['left']=100;
+view_panel['top']=0;
+view_panel['left']=0;
 var IE = document.all?true:false
 if (!IE) document.captureEvents(Event.MOUSEMOVE)
 
 
 function getMouseXY(e) {
   if (IE) {
-    tempX = event.clientX + document.body.scrollLeft
-    tempY = event.clientY + document.body.scrollTop
+    p_x = event.clientX + document.body.scrollLeft
+    p_y = event.clientY + document.body.scrollTop
   } else {
-    tempX = e.pageX
-    tempY = e.pageY
+    p_x = e.pageX
+    p_y = e.pageY
   }  
-  if (tempX < 0){tempX = 0}
-  if (tempY < 0){tempY = 0}
-  return true
+  if (p_x < 0){p_x = 0}
+  if (p_y < 0){p_y = 0}
+  return [p_x,p_y]
 }
 
 function getOffsets(cropper){
@@ -49,94 +49,7 @@ function getOffsets(cropper){
 	return true
 }
 
-
-
 jQuery.fn.extend({
-   makeButton:function(image,transform,params,title){
-		var text = title || (transform+" "+params.join(" "));
-		var button=$("<div class='doit pseudolink' id='" + transform+ "'>"+text+"</div>");
-		var target=	$(".croppee")
-		button.bind("click",function(){
-			if ($(this).find("input").size()==0 && params[0]!=""){
-				for (var i in params){
-					var field=$("<input type='text' value='"+params[i]+"'/>");
-					$(this).append(field);
-				}
-				$(this).append("<div class='pseudobutton ok'>ok</div>");
-				$(this).append("<div class='pseudobutton cancel'>cancel</div>");
-				
-				$(".ok").bind("click",function(){
-					$(".loader").css("visibility","visible");
-					var new_params=$.map($(this).parent().find("input"), function(i){return i.value;});
-					target.getImage(image_prefix,image,transform,new_params);
-				});
-				$(".pseudobutton").bind("click",function(){
-					$(this).parent().parent().find("input").remove();
-					$(this).parent().parent().find(".pseudobutton").remove();
-				});
-				$(this).find("input").eq(0).focus().select();
-			}
-			else if (params[0]=="") {
-		    	$(".loader").css("visibility","visible");
-				target.getImage(image_prefix,image,transform,params);
-			}	
-		});
-		$(this).append(button);
-	},
-   getImage:function(node,id,transformation,params){
-	
-		params=(params || null);
-		var url=new Array();
-		var croppee=$(this);
-		url =[node,id,transformation];
-		if (params.length>0){
-			url = url.concat(params);
-		}
-		url=url.join("/");
-		updated_url=[node,id,"refresh",Math.random()].join("/");
-		var request=$.ajax({
-			type: "GET",
-			url: (url),
-			datatype:"json",
-			async:true,
-			success:function(json){
-				$(".loader").css("visibility","hidden");
-			
-				}
-			});
-		$(this).ajaxComplete(function(request){
-			$(this).css("background-image","url("+ updated_url+")");
-				$(".cropper").css("background-image","url("+ updated_url+")");
-		});
-
-		if ($(this).css("background-image").length>5){
-			
-		
-		}
-		else{
-			$(this).attr("src",	updated_url);
-		}
-				
-		$.ajax({
-			type: "GET",
-			url: (url+"/info"),
-			datatype:"json",
-			async:true,
-			success:function(json){
-				info=eval(json);
-				croppee.width(info[0]['width']+"px").height(info[0]['height']+"px");
-				croppee.center();
-			}
-			});
-	},
-	keepCentered:function(){
-		var c=$(this)
-		$(this).center()
-		$(window).bind("resize",function(){
-			c.center();
-		});
-			return $(this);
-	},
 	center:function(){
 		var lo=parseFloat(($(window).width()-$(this).width())/2);
 		var to=parseFloat(($(window).height()-$(this).height())/2);
@@ -200,16 +113,7 @@ jQuery.fn.extend({
 	var cropper = $("<div class='cropper'></div>");
 	var curtain = $("<div class='curtain'></div>");
 
-//	var image_id=croppee.css("background-image").replace(/url\(/,'').replace(/[\)]/,'').split("/");
-	//var img_src=$(this).attr("src");
-/*	if (img_src != null){
-		croppee=$("<div class='croppee'></div>");
-		$("body").append(croppee);
-	//	$(this).remove();
-		source_image=img_src;
- 	}*/
-//	else{
-			source_image=$(this).workingVersion();
+	source_image=$(this).workingVersion();
 //	}
 //	var response=$.ajax({
 //		type: "GET",
@@ -230,7 +134,7 @@ jQuery.fn.extend({
 	cropper.append("<div class='handle topmost rightmost' id='tr'></div>");
 	cropper.append("<div class='handle bottommost leftmost' id='bl'></div>");
 	cropper.append("<div class='handle bottommost rightmost' id='br'></div>");
-//	cropper.append("<div class='dragger'></div>");
+	cropper.append("<div class='dragger'></div>");
 	
 	$(".handle").width(h_width).height(h_height);
 	$(".dragger").width(cropper.width()).height(cropper.height());
@@ -239,12 +143,11 @@ jQuery.fn.extend({
 	cropper.css("background-image",("url("+source_image+")"));
 	croppee.css("background-image",("url("+source_image+")"));
 
-	$(".handle").bind("mousedown",function(){
+	$(".handle").bind("mousedown",function(e){
 		clicking=true;
-		document.onmousedown = getMouseXY;
-		view_panel.top=croppee.css("top").replace(/px/,'');
-		view_panel.left=croppee.css("left").replace(/px/,'');;
-		
+		tempX = getMouseXY(e)[0]
+		tempY = getMouseXY(e)[1]
+		document.onmousemove = getMouseXY(e);
 		hand=$(this).attr("id");
 	});
 
@@ -253,10 +156,9 @@ jQuery.fn.extend({
 		clicking=false;
 		dragging=false;
 		i=0;
-		p_x=0
-		p_y=0
+		document.onmousemove = null;
 	});
-
+/*
 	$(".dragger").bind("mousedown",function(){
 		i=0;
 		dragging=true;
@@ -272,64 +174,34 @@ jQuery.fn.extend({
 		view_panel.left=croppee.css("left").replace(/px/,'');;
 	
 	});
-
-	$("body").bind("mousemove",function(){
-		constrained=false;
-		if (false){
-			document.onmousemove = getMouseXY;
-			$(".toolbar").append("<div>"+d_y+"</div>");
-		//	tempY=(tempY-view_panel.top);
-		//	tempX=(tempX-view_panel.left);
-			d_y+=ParseFloat(tempY-p_y);
-			getOffsets(cropper);
-			if ((tempX+cropper.width())>max_width){tempX=(max_width-cropper.width());constrained=true}
-			if ((tempY+cropper.height())>max_height){tempY=(max_height-cropper.height());constrained=true}
-			cropper.css("left",
-				(tempX-h_width)).css("top",d_y).css("background-position",
-				("-"+(tempX-h_width)+"px -" + (tempY-h_height)+"px"));
-			//tempY+=view_panel.top;
-		//	tempX+=view_panel.left;
-			
-		}
+*/
+	$("body").bind("mousemove",function(e){
 		if(clicking==true){	
-			document.onmousemove = getMouseXY;
-			tempY=(tempY-view_panel.top)-(2*h_height);
-			tempX=(tempX-view_panel.left)+(h_width);
-			if (tempX<h_width){tempX=h_width;constrained=true}
-			if (tempY<h_height){tempY=h_height;constrained=true}
-			if (tempX>max_width){tempX=max_width;constrained=true}
-			if (tempY>max_height){tempY=max_height;constrained=true}
-			if (top_left_drags && hand=="tl"){
-				if ((tempX+cropper.width())>max_width){tempX=(max_width-cropper.width());constrained=true}
-				if ((tempY+cropper.height())>max_height){tempY=(max_height-cropper.height());constrained=true}
-			}
-			getOffsets(cropper);
+
+	
+		//	getOffsets(cropper);
 		
 			if (hand=="br"){
-				if (!constrained){
-					cropper.width(tempX-offset.left).height(tempY-offset.top);
-				}
+				var cw = $(".cropper").width()
+				$(".cropper").width(cw + (getMouseXY(e)[0] - tempX))
+			
 			}
 			else if (hand=="bl"){
 				if (!constrained){
-					cropper.width(offset.right-tempX+h_width).height(tempY-offset.top).css("left",(tempX-h_width)).css("background-position",("-"+(tempX-h_width)+"px -" + offset.top+"px"));
+				
 				}
 			}
 			else if (hand=="tr"){
 				if (!constrained){
-					cropper.width(tempX-offset.left).css("top",(tempY-h_height)).height(offset.bottom-tempY+h_height).css("background-position",("-"+offset.left+"px -" + (tempY-h_height)+"px"));
+				
 				}
 			}
 			else if (hand=="tl"){
 				if(!constrained){
 					if (!top_left_drags){
-						cropper.height(offset.bottom-tempY+h_height).width(offset.right-tempX+h_width);
 					}
-					cropper.css("left",(tempX-h_width)).css("top",(tempY-h_height)).css("background-position",("-"+(tempX-h_width)+"px -" + (tempY-h_height)+"px"));
 				}	
 			}	
-			tempY+=view_panel.top;
-			tempX+=view_panel.left;
 		}
 	});
 	}

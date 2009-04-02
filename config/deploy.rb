@@ -1,5 +1,5 @@
 set :application, "highlight"
-set :rails_env, "production"
+set :rails_env, "development"
 
 set :repository,  "git://github.com/justinvt/highlight.git"
 
@@ -62,7 +62,7 @@ set :ec2onrails_config, {
   # Any extra RubyGems to install if desired: can be "gemname" or if a 
   # particular version is desired "gemname -v 1.0.1"
   # If you don't want to install extra rubygems then remove this
-  :rubygems => ["tzinfo", "", "hpricot", "BlueCloth", "RedCloth", "ferret", "rails -v 2.3.2"],
+  :rubygems => ["tzinfo", "rails -v 2.3.2"],
   
   # Set the server timezone. run "cap -e ec2onrails:server:set_timezone" for 
   # details

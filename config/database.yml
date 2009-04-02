@@ -1,4 +1,4 @@
-development:
+justin:
   hostname: db_primary
   adapter: mysql
   encoding: utf8
@@ -6,6 +6,15 @@ development:
   username: root
   password: 
   socket: /tmp/mysql.sock
+  
+development:
+  hostname: db_primary
+  adapter: mysql
+  encoding: utf8
+  database: highlight_production
+  username: root
+  password: h1ghl1ght
+  socket: /var/run/mysqld/mysqld.sock
 
 test:
   hostname: db_primary

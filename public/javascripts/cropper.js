@@ -336,21 +336,5 @@ jQuery.fn.extend({
 });
 
 $(document).ready(function(){
-
-	var img =$("<img src='' class='edited'/>");
-	var image_id=$(".croppee").css("background-image").replace(/url\(/,'').replace(/[\)]/,'').split("/");
-	image_id=image_id[image_id.length-1];
-	$("body").append(img);
-	$(".toolbar").draggable()
-	//$(".croppee").allowCropping(function(){$(".edited").getImage( image_prefix,image_id,"crop",[offset.left,(offset.top),offset.right-offset.left,offset.bottom-offset.top]);});
-	$(".croppee").properlySize().keepCentered();
-	$(".toolbar").makeButton(image_id,"rotate",["0"],"rotate");
-	$(".toolbar").makeButton(image_id,"negate",[""]);
-	$(".toolbar").makeButton(image_id,"implode",["0"],"pinch");
-	$(".toolbar").makeButton(image_id,"modulate",["1","1","1"],"darken");
-	$(".toolbar").makeButton(image_id,"charcoal",[""]);
-	$(".toolbar").makeButton(image_id,"equalize",[""]);
-	$(".toolbar").makeButton(image_id,"gaussian_blur",["0","0"],"gaussian blur");
-	$(".toolbar").append("<div class='doit pseudolink' id='crop'>crop</div>").find("#crop").click(function(){$(".croppee").allowCropping();});
-	$(".toolbar").makeButton(image_id,"undo",[""]);
+	$(".screeshot img").allowCropping();
 });

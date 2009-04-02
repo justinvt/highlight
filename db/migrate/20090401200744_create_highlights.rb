@@ -7,7 +7,7 @@ class CreateHighlights < ActiveRecord::Migration
       t.integer :x2
       t.integer :y2
       t.string :tiny_url
-      t.text :src
+      t.text :src, :notes
       t.datetime :created_at
       t.datetime :updated_at
 

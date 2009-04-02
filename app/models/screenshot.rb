@@ -1,5 +1,6 @@
 require "rubygems"
 require "rwebthumb"
+require 'builder'
 
 class Screenshot < ActiveRecord::Base
   
@@ -8,6 +9,7 @@ class Screenshot < ActiveRecord::Base
   belongs_to :highlight
   
   @@api_key = :dde49e22186a07b826e22770d1f78705
+  @@user_id =  4461
   
     
   has_attachment :content_type => :image, 
@@ -24,6 +26,9 @@ class Screenshot < ActiveRecord::Base
     thumb = Webthumb.new(@@api_key.to_s)
     job = thumb.thumbnail(:url => highlight.url)
     o = job.write_file(job.fetch_when_complete(:large), filename)
+    #et = Easythumb.new(@@api_key.to_s, @@user_id.to_s)
+    #et.build_url(:url => 'http://simplificator.com', :size => :full, :cache => 1)
+    #raise et.inspect
     file_id = File.basename(filename)
     ext = File.extname(filename)
     file_base = file_id.gsub(ext,'')
@@ -55,6 +60,10 @@ class Screenshot < ActiveRecord::Base
     img.update_attributes(:highlight_id=>highlight.id)
     File.delete(o)
   end
+  
+  def request
+  end
+
 
   
 end

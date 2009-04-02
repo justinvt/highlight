@@ -1,4 +1,4 @@
-class CreateErrors < ActiveRecord::Migration
+class CreateDbErrors < ActiveRecord::Migration
   
   def self.up
     create_table :errors do |t|

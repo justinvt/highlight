@@ -22,5 +22,5 @@ production:
   encoding: utf8
   database: highlight_production
   username: root
-  password: h1ghlight
+  password: h1ghl1ght
   socket: /var/run/mysqld/mysqld.sock

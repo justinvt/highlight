@@ -6243,3 +6243,105 @@ Rendering highlights/show
   [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 37) LIMIT 1[0m
   [4;36;1mScreenshot Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
 Completed in 49ms (View: 29, DB: 9) | 200 OK [http://localhost/highlights/37]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (11.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (24.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to Errors (20090402051934)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to Errors (20090402051934)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to Errors (20090402051934)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to Errors (20090402051934)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to Errors (20090402051934)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDbErrors (20090402051934)
+Migrating to CreateScreenshots (20090401200939)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDbErrors (20090402051934)
+Migrating to CreateScreenshots (20090401200939)
+  [4;36;1mSQL (404.5ms)[0m   [0;1mDROP TABLE `screenshots`[0m
+  [4;35;1mSQL (76.4ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090401200939'[0m
+Migrating to CreateHighlights (20090401200744)
+  [4;36;1mSQL (100.6ms)[0m   [0;1mDROP TABLE `highlights`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090401200744'[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `web_thumbs`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `web_thumbs`[0m
+  [4;35;1mSQL (14.2ms)[0m   [0mSHOW KEYS FROM `web_thumbs`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateHighlights (20090401200744)
+  [4;36;1mSQL (342.0ms)[0m   [0;1mCREATE TABLE `highlights` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `url` varchar(255), `tiny_url` varchar(255), `x1` int(11), `y1` int(11), `x2` int(11), `y2` int(11), `src` text, `notes` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090401200744')[0m
+Migrating to CreateScreenshots (20090401200939)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateHighlights (20090401200744)
+Migrating to CreateScreenshots (20090401200939)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateHighlights (20090401200744)
+Migrating to CreateScreenshots (20090401200939)
+  [4;36;1mSQL (146.6ms)[0m   [0;1mCREATE TABLE `screenshots` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11), `highlight_id` int(11), `size` int(11), `width` int(11), `height` int(11), `content_type` varchar(255), `filename` varchar(255), `thumbnail` varchar(255), `hash` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090401200939')[0m
+Migrating to CreateDbErrors (20090402051934)
+  [4;36;1mSQL (105.9ms)[0m   [0;1mCREATE TABLE `errors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `line` int(11), `explain` text, `updated_at` datetime, `url` varchar(255), `action` varchar(255), `user_id` int(11), `type` varchar(255), `content` text, `user_name` varchar(255), `params` text, `file` varchar(255), `controller` varchar(255), `message` varchar(255), `referrer` varchar(255), `session_data` text) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090402051934')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mSHOW FIELDS FROM `errors`[0m
+  [4;36;1mSQL (78.6ms)[0m   [0;1mdescribe `errors`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `errors`[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `highlights`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW KEYS FROM `highlights`[0m
+  [4;35;1mSQL (50.8ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mdescribe `screenshots`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `screenshots`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `web_thumbs`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `web_thumbs`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `web_thumbs`[0m

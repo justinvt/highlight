@@ -1,0 +1,17 @@
+development:
+  aws_access_key: 1VDJRW8X3J4A7SNFG602
+  aws_secret_access_key: QLX9bYsM1+PRXCxeJHcW6nwU5yC2RjCTZDTYicM2
+  bucket_base_name: highlight_test
+  account_id: 8110-8347-6963
+
+test:
+  aws_access_key: 1VDJRW8X3J4A7SNFG602
+  aws_secret_access_key: QLX9bYsM1+PRXCxeJHcW6nwU5yC2RjCTZDTYicM2
+  bucket_base_name: highlight_test
+  account_id: 8110-8347-6963
+
+production:
+  aws_access_key: 1VDJRW8X3J4A7SNFG602
+  aws_secret_access_key: QLX9bYsM1+PRXCxeJHcW6nwU5yC2RjCTZDTYicM2
+  bucket_base_name: highlight_test
+  account_id: 8110-8347-6963

@@ -1,0 +1,11 @@
+body,html{border-width:0px;margin:0px;padding:0px}
+body{font-family:"Lucida Sans","Trebuchet MS", Helvetica, Arial, Verdana, sans-serif;font-size:0.9em;line-height:1.4em}
+p{margin:0 auto 1.8em 0;}
+
+
+*{outline:none;}
+
+.cleaner{clear:both;}
+.system_message{font-size:0.8em;padding:5px;text-align:center;width:auto;margin:10px 10px 10px 10px;background:#f4fff4;color:#669966;border-width:1px 0 1px 0;border-style:solid;border-color:#aaccaa;}
+.notice{background:#f4fff4;color:#669966;border-color:#aaccaa;}
+.warning{background:#fff4f4;color:#996666;border-color:#ccaaaa;}

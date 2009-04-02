@@ -1,0 +1,26 @@
+development:
+  hostname: db_primary
+  adapter: mysql
+  encoding: utf8
+  database: highlight_development
+  username: root
+  password: 
+  socket: /tmp/mysql.sock
+
+test:
+  hostname: db_primary
+  adapter: mysql
+  encoding: utf8
+  database: highlight_test
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+production:
+  hostname: db_primary
+  adapter: mysql
+  encoding: utf8
+  database: highlight_production
+  username: root
+  password: h1ghlight
+  socket: /var/run/mysqld/mysqld.sock

@@ -1,0 +1,5 @@
+.content, .screenshot{margin:60px auto auto auto;text-align:center;}
+.content{width:300px;padding:10px;border:solid 1px #ccc;}
+.screenshot{width:640px;height:480px;border:solid 3px #000;}
+
+.tools {padding:5px;margin:0;width:auto;}

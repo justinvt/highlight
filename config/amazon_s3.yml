@@ -1,0 +1,14 @@
+development:
+  bucket_name: highlight_test
+  access_key_id: 1VDJRW8X3J4A7SNFG602
+  secret_access_key: QLX9bYsM1+PRXCxeJHcW6nwU5yC2RjCTZDTYicM2
+
+test:
+  bucket_name: highligh.ht
+  access_key_id:
+  secret_access_key:
+
+production:
+  bucket_name: highligh.ht
+  access_key_id: 1VDJRW8X3J4A7SNFG602
+  secret_access_key: QLX9bYsM1+PRXCxeJHcW6nwU5yC2RjCTZDTYicM2

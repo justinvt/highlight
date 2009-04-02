@@ -58,7 +58,7 @@ class Screenshot < ActiveRecord::Base
     }
     img = self.create params
     img.update_attributes(:highlight_id=>highlight.id)
-    File.delete(o)
+    File.delete(o.path)
   end
   
   def request

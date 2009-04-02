@@ -20,8 +20,8 @@ var source_image="";
 var offset=new Object();
 var image_prefix=null;
 var view_panel=new Object();
-view_panel['height']=300;
-view_panel['width']=500;
+view_panel['height']=480;
+view_panel['width']=640;
 view_panel['top']=100;
 view_panel['left']=100;
 var IE = document.all?true:false
@@ -211,14 +211,14 @@ jQuery.fn.extend({
 //	else{
 			source_image=$(this).workingVersion();
 //	}
-	var response=$.ajax({
-	type: "GET",
-	url: (source_image+"/info"),
-	datatype:"json",
-	async:false
-	}).responseText;
-	info=eval(response);
-	croppee.width(info[0]['width']).height(info[0]['height']);
+//	var response=$.ajax({
+//		type: "GET",
+//		url: (source_image+"/info"),
+//		datatype:"json",
+//		async:false
+//	}).responseText;
+//	info=eval(response);
+	croppee.width(640).height(480);
 	
 	croppee.prepend(curtain).prepend(cropper).css("font-size","0px");
 	max_width=croppee.width();
@@ -336,5 +336,5 @@ jQuery.fn.extend({
 });
 
 $(document).ready(function(){
-	$(".screeshot img").allowCropping();
+	$(".screenshot").allowCropping();
 });

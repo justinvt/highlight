@@ -13,4 +13,8 @@ module ApplicationHelper
     javascript_include_tag "jquery", "cropper"
   end
   
+  def home_js
+    javascript_include_tag "min"
+  end
+  
 end

@@ -1,6 +1,8 @@
+.field{width:100%;}
+input{margin:0 auto;padding:0.1 0.2em;width:80%;text-align:center;}
 .content, .screenshot{margin:60px auto auto auto;text-align:center;}
 .content{width:300px;padding:10px;border:solid 1px #ccc;}
-.screenshot{width:640px;height:480px;border:solid 3px #000;position:relative;}
+.screenshot{width:640px;height:480px;border:solid 10px #000;position:relative;}
 
 .tools {padding:5px;margin:0;width:auto;}
 
@@ -10,15 +12,9 @@
 .croppee{width:400px;height:400px;position:relative;z-index:0;left:200px;top:100px;}
 .cropper{z-index:20;width:100px;height:100px;background-position:-10px -10px;position:absolute;top:10px;left:10px;}
 .dragger{position:absolute;cursor:move;z-index:1;}
-.curtain{background:#666;;position:absolute;top:0px;left:0px;z-index:2;opacity: 0.5;
--moz-opacity: 0.5;
-filter:alpha(opacity=50)}
-
+.curtain{background:#666;;position:absolute;top:0px;left:0px;z-index:2;opacity: 0.5;-moz-opacity: 0.5;filter:alpha(opacity=50)}
 .handle{background:white;position:absolute;cursor:pointer;z-index:2;}
 .topmost{top:0px}
 .bottommost{bottom:0px}
 .leftmost{left:0px}
 .rightmost{right:0px}
-
-.toolbar{font-size:0.8em;position:fixed;top:60px;left:20px;z-index:20;width:105px;border:solid 2px #000}
-.toolbar .grabber{background:#ccc;width:100%;height:8px;text-align:right;cursor:pointer}

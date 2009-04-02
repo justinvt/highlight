@@ -1,5 +1,5 @@
 .content
   %h1 Highlight
-  %form{:method=>"POST", :action=>'highlights'}
+  %form{:method=>"post", :action=>"#{highlights_path}"}
     .field
       %input#highlight_url{:name=>"highlight[url]", :type=>"text", :value=>"Enter URL"}

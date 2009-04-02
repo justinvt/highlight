@@ -4,7 +4,7 @@ class Highlight < ActiveRecord::Base
   
   has_one :screenshot
   
-  before_save :cache_src
+  before_save :cache_src, :repair_url
   after_save :cache_image
 
   def self.thumbnails
@@ -26,7 +26,13 @@ class Highlight < ActiveRecord::Base
   
   def cache_src
     self.src = open(url.to_s).read
-  end  
+  end
+  
+  def repair_url
+    unless url.match(/^http:\/\//)
+      url = "http://" + url
+    end
+  end
   
   
 end

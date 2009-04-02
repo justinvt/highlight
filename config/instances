@@ -1,0 +1,2 @@
+RESERVATION	r-fa119c93	811083476963	default
+INSTANCE	i-6334550a	ami-5394733a	ec2-75-101-164-86.compute-1.amazonaws.com	domU-12-31-39-02-EC-31.compute-1.internal	running	id_rsa-freshout	0		m1.small	2009-04-02T01:42:04+0000	us-east-1a	aki-a71cf9ce	ari-a51cf9cc

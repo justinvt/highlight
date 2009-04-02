@@ -18,14 +18,20 @@ ssh_options[:config]        =  false
 default_run_options[:pty] = true
 set :deploy_via, :remote_cache
 
-# Your EC2 instances. Use the  hostname, not
-# any other name (in case you have your own DNS alias) or it won't
-# be able to resolve to the internal IP address.
+before "deploy:cold", :repair_image_magick
 
 role :web,     hostname
 role :app,     hostname
 role :db,      hostname, :primary => true#,  :ebs_vol_id => 'vol-2f7e9a46'
 role :memcache,hostname
+
+task :repair_image_magick, :roles=>[:app_admin] do
+  sudo "aptitude update"
+  sudo "aptitude install imagemagick -y"
+  sudo "apt-get install librmagick-ruby  --yes"
+  sudo "apt-get install libmagick9-dev --yes"
+  sudo "gem install rmagick"
+end
 
 # EC2 on Rails config. 
 # NOTE: Some of these should be omitted if not needed.

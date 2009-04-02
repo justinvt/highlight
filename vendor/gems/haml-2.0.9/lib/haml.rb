@@ -1010,7 +1010,7 @@ module Haml
   # without modifying the file itself.
   def self.init_rails(binding)
     # No &method here for Rails 2.1 compatibility
-    %w[haml/template sass sass/plugin].each {|f| require f}
+    %w[haml/template].each {|f| require f}
   end
 end
 

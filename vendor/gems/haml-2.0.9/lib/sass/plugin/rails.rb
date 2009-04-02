@@ -3,8 +3,8 @@ unless defined?(Sass::RAILS_LOADED)
 
   Sass::Plugin.options.merge!(:template_location  => RAILS_ROOT + '/public/stylesheets/sass',
                               :css_location       => RAILS_ROOT + '/public/stylesheets',
-                              :always_check       => RAILS_ENV != "production",
-                              :full_exception     => false)
+                              :always_check       => true,
+                              :full_exception     => true)
 
   # :stopdoc:
   module ActionController

@@ -5,8 +5,8 @@ class Highlight < ActiveRecord::Base
   has_many :screenshots
   
   before_validation :repair_url
-  before_save :cache_src
-  after_save :cache_image
+  before_create :cache_src
+  after_create :cache_image
   
   def screenshot
     screenshots.first

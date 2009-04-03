@@ -2,11 +2,15 @@ require 'open-uri'
 
 class Highlight < ActiveRecord::Base
   
-  has_one :screenshot
+  has_many :screenshots
   
   before_validation :repair_url
   before_save :cache_src
   after_save :cache_image
+  
+  def screenshot
+    screenshots.first
+  end
 
   def self.thumbnails
     {

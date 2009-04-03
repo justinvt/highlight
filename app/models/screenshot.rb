@@ -52,10 +52,10 @@ class Screenshot < ActiveRecord::Base
          ".xwd" => "image/x-xwindowdump"
     }
     params = 
-    img = Screenshot.create({ 
-      :temp_path => o.to_s, 
-      :filename=>file_id.to_s, 
-      :content_type=>content_types[ext].to_s
+    img = self.create({ 
+      :temp_path => o,
+      :filename=>file_id, 
+      :content_type=>content_types[ext]
     })
     img.update_attributes(:highlight_id=>highlight.id)
     File.delete(o.path)

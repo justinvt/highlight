@@ -10,7 +10,7 @@ module ApplicationHelper
   end
   
   def editor_js
-    javascript_include_tag "jquery", "cropper"
+    javascript_include_tag "jquery", "jcrop", "application"
   end
   
   def home_js

@@ -65,3 +65,318 @@ Rendering highlights/show
   [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
   [4;35;1mScreenshot Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
 Completed in 121ms (View: 84, DB: 26) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:46:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (9.4ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (15.8ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 1097ms (View: 1033, DB: 29) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:47:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (2.7ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 118ms (View: 24, DB: 10) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:47:08) [GET]
+  Parameters: {"id"=>"undefined"}
+  [4;36;1mHighlight Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (0.3ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Highlight with ID=undefined):
+  app/controllers/highlights_controller.rb:26:in `show'
+
+  [4;36;1mDbError Columns (12.1ms)[0m   [0;1mSHOW FIELDS FROM `errors`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDbError Create (0.9ms)[0m   [0;1mINSERT INTO `errors` (`referrer`, `created_at`, `line`, `explain`, `updated_at`, `url`, `action`, `user_id`, `type`, `content`, `user_name`, `params`, `file`, `controller`, `message`, `session_data`) VALUES('http://localhost:3001/highlights/1', '2009-04-03 19:47:08', NULL, NULL, '2009-04-03 19:47:08', NULL, 'show', NULL, NULL, '#<ActiveRecord::RecordNotFound: Couldn\'t find Highlight with ID=undefined>', NULL, '--- !map:HashWithIndifferentAccess \naction: show\nid: undefined\ncontroller: highlights\n', NULL, 'highlights', 'Couldn\'t find Highlight with ID=undefined', '--- \n')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered rescues/_trace (50.0ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:48:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (24.2ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (2.7ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+
+ActionView::TemplateError (undefined method `public_filename' for #<Highlight:0x33bc024>) on line #2 of app/views/highlights/show.haml:
+1: .screenshot
+2:   %img{:src=>@highlight.public_filename}
+
+    app/views/highlights/show.haml:2:in `_run_haml_app47views47highlights47show46haml'
+    haml (2.0.9) [v] lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) [v] lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/highlights_controller.rb:28:in `show'
+
+  [4;36;1mDbError Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `errors`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDbError Create (0.3ms)[0m   [0;1mINSERT INTO `errors` (`referrer`, `created_at`, `line`, `explain`, `updated_at`, `url`, `action`, `user_id`, `type`, `content`, `user_name`, `params`, `file`, `controller`, `message`, `session_data`) VALUES('http://localhost:3001/', '2009-04-03 19:48:09', 2, 'String', '2009-04-03 19:48:09', NULL, 'show', NULL, NULL, '#<ActionView::TemplateError: \nActionView::TemplateError (undefined method `public_filename\' for #<Highlight:0x33bc024>) on line #2 of app/views/highlights/show.haml:\n1: .screenshot\n2: %img{:src=>@highlight.public_filename}\n\n app/views/highlights/show.haml:2:in `_run_haml_app47views47highlights47show46haml\'\n haml (2.0.9) [v] lib/haml/helpers/action_view_mods.rb:14:in `render\'\n haml (2.0.9) [v] lib/haml/helpers/action_view_mods.rb:14:in `render\'\n app/controllers/highlights_controller.rb:28:in `show\'\n\n>', NULL, '--- !map:HashWithIndifferentAccess \naction: show\nid: \"1\"\ncontroller: highlights\n', 'app/views/highlights/show.haml', 'highlights', 'undefined method `public_filename\' for #<Highlight:0x33bc024>', '--- \n')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendered rescues/_trace (137.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:48:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (2.9ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 46ms (View: 27, DB: 9) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:48:20) [GET]
+  Parameters: {"id"=>"undefined"}
+  [4;36;1mHighlight Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (0.3ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Highlight with ID=undefined):
+  app/controllers/highlights_controller.rb:26:in `show'
+
+  [4;36;1mDbError Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `errors`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;35;1mSQL (1.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDbError Create (0.3ms)[0m   [0;1mINSERT INTO `errors` (`referrer`, `created_at`, `line`, `explain`, `updated_at`, `url`, `action`, `user_id`, `type`, `content`, `user_name`, `params`, `file`, `controller`, `message`, `session_data`) VALUES('http://localhost:3001/highlights/1', '2009-04-03 19:48:20', NULL, NULL, '2009-04-03 19:48:20', NULL, 'show', NULL, NULL, '#<ActiveRecord::RecordNotFound: Couldn\'t find Highlight with ID=undefined>', NULL, '--- !map:HashWithIndifferentAccess \naction: show\nid: undefined\ncontroller: highlights\n', NULL, 'highlights', 'Couldn\'t find Highlight with ID=undefined', '--- \n')[0m
+  [4;35;1mSQL (18.6ms)[0m   [0mCOMMIT[0m
+Rendered rescues/_trace (41.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:48:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (4.1ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (2.6ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (119.0ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 165ms (View: 28, DB: 127) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:48:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (2.9ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 44ms (View: 25, DB: 9) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:49:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (2.8ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (70.7ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 117ms (View: 29, DB: 78) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:50:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (3.0ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (4.3ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 48ms (View: 26, DB: 12) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:50:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.4ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 42ms (View: 25, DB: 8) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:51:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (99.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 143ms (View: 27, DB: 106) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:52:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (115.3ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 157ms (View: 26, DB: 121) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:52:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (2.9ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (4.7ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 50ms (View: 28, DB: 12) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:53:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (2.8ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (68.3ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 114ms (View: 26, DB: 76) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:53:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (2.6ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 45ms (View: 27, DB: 9) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:53:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.2ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 108ms (View: 93, DB: 5) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:57:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.3ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 55ms (View: 38, DB: 5) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:58:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (3.2ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (59.2ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 104ms (View: 27, DB: 67) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:58:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (4.1ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (2.9ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 44ms (View: 24, DB: 9) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:58:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (2.7ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (4.7ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 48ms (View: 27, DB: 12) | 200 OK [http://localhost/highlights/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-03 15:59:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighlight Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (94.3ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+Rendering template within layouts/editor
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 1) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 138ms (View: 27, DB: 101) | 200 OK [http://localhost/highlights/1]

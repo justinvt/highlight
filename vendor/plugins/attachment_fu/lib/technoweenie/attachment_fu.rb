@@ -229,7 +229,7 @@ module Technoweenie # :nodoc:
       end
       
       def thumb_sizes
-        owner_class = self.class.reflect_on_all_associations(:belongs_to).reject{|o| o.class_name.gsub(/[^a-zA-Z]/,'') =~ /Screenshot/ }[0]
+        owner_class = self.class.reflect_on_all_associations(:belongs_to).reject{|o| o.class_name.gsub(/[^a-zA-Z]/,'') =~ /Screenshot/ }[0].gsub(/[^a-zA-Z_]/,'')
         if owner_class.blank?
           attachment_options[:thumbnails]
         else

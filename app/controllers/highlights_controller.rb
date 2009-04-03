@@ -6,7 +6,8 @@ class HighlightsController < ApplicationController
   def layout
     case params[:action]
       when "new" : "home"
-      when "show" : "editor"
+      when "edit" : "editor"
+      when "show" : "viewer"
     end
   end
   
@@ -59,7 +60,7 @@ class HighlightsController < ApplicationController
     respond_to do |format|
       if @highlight.save
         flash[:notice] = 'Highlight was successfully created.'
-        format.html { redirect_to(@highlight) }
+        format.html { redirect_to(edit_highlight_url(@highlight)) }
         format.xml  { render :xml => @highlight, :status => :created, :location => @highlight }
       else
         flash[:warning] = 'Url was invalid'

@@ -1,5 +1,5 @@
 require 'open-uri'
-
+require 'integer_addons'
 class Highlight < ActiveRecord::Base
   
   has_many :screenshots
@@ -32,6 +32,27 @@ class Highlight < ActiveRecord::Base
       self.url = "http://" + url.to_s
     end
   end
+  
+  def width
+    (x2-x1).to_px
+  end
+  
+  def height
+    (y2-y1).to_px
+  end
+  
+  def top
+    (y1-2).to_px
+  end
+  
+  def left
+    (x1-2).to_px
+  end
+  
+  def background_position
+    [(-x1).to_px,(-y1).to_px ]
+  end
+  
   
   
 end

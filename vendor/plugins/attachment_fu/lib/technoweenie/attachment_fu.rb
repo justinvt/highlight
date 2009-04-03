@@ -229,11 +229,11 @@ module Technoweenie # :nodoc:
       end
       
       def thumb_sizes
-        owner_class = self.class.reflect_on_all_associations(:belongs_to).reject{|o| o.class_name.gsub(/[^a-zA-Z]/,'') =~ /Screenshot/ }[0].gsub(/[^a-zA-Z_]/,'')
+        owner_class = self.class.reflect_on_all_associations(:belongs_to).reject{|o| o.class_name.gsub(/[^a-zA-Z]/,'') =~ /Screenshot/ }[0]
         if owner_class.blank?
           attachment_options[:thumbnails]
         else
-          owner = self.method(owner_class.class_name.underscore).call
+          owner = self.method(owner_class.class_name.underscore.gsub(/[^a-zA-Z_]/,'')).call
           thumbnail_sizes = owner.class.methods.include?("thumbnails") ? owner.class.thumbnails : attachment_options[:thumbnails]
         end
       end

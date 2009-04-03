@@ -15,3 +15,11 @@ input{margin:0 auto;padding:0.1 0.2em;width:80%;text-align:center;}
 .custom .jcrop-vline,
 .custom .jcrop-hline{background:yellow;}
 .custom .jcrop-handle{border-color:#fff;background-color:#C7BB00;}
+.note{background:#000;position:absolute;top:-5em;right:-1em;border:solid 2px #ff0;width:20em;}
+.note input{display:block;margin:0;background:#000;color:#fff;border:none;padding:0.5em;}
+.arrows{position:absolute;bottom:-20px;right:30px;}
+.arrow{font-size: 0px; line-height: 0%; width: 0px;}
+.a1{border-top: 20px solid #ff0;border-right: 20px solid transparent;position:absolute;bottom:0;right:0px;}
+.a2{border-top: 20px solid #ff0;border-left: 20px solid transparent;position:absolute;bottom:0;right:20px;}
+.a3{border-top: 18px solid #000;border-right: 18px solid transparent;position:absolute;bottom:2px;right:2px;}
+.a4{border-top: 18px solid #000;border-left: 18px solid transparent;position:absolute;bottom:2px;right:19px;}

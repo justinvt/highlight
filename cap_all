@@ -1,0 +1,5 @@
+#!/bin/bash
+git push origin master
+cap deploy:web:disable
+cap deploy
+cap deploy:web:enable

@@ -52,12 +52,7 @@ ActiveRecord::Schema.define(:version => 20090402051934) do
     t.string  "content_type"
     t.string  "filename"
     t.string  "thumbnail"
-    t.string  "hash"
-  end
-
-  create_table "web_thumbs", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string  "data_hash"
   end
 
 end

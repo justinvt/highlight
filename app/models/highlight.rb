@@ -14,13 +14,7 @@ class Highlight < ActiveRecord::Base
 
   def self.thumbnails
     {
-      :tiny =>"c38x24", 
-      :large_furniture=>'349x500', 
-      :mini=>"40x40", 
       :thumb => "50x50",  
-      :furniture=>"72x72",  
-      :medium=>'400x400>', 
-      :enlarged=>'600x600' 
     }
   end
   

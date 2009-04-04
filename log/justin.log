@@ -10788,3 +10788,471 @@ Processing HighlightsController#new (for 127.0.0.1 at 2009-04-03 22:24:46) [GET]
 Rendering template within layouts/home
 Rendering highlights/new
 Completed in 17ms (View: 3, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (10.3ms)[0m   [0;1mSELECT * FROM `screenshots` ORDER BY screenshots.id DESC LIMIT 1[0m
+  [4;35;1mScreenshot Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` ORDER BY screenshots.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM `screenshots` ORDER BY screenshots.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` ORDER BY screenshots.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM `screenshots` ORDER BY screenshots.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` ORDER BY screenshots.id DESC LIMIT 1[0m
+  [4;35;1mScreenshot Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` ORDER BY screenshots.id DESC LIMIT 1[0m
+  [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;36;1mHighlight Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (3.7ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mHighlight Load (1.4ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.4ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (80.2ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (92.3ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.6ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mHighlight Load (1.9ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mHighlight Columns (4.3ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (3.0ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mScreenshot Load (0.2ms)[0m   [0mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;36;1mScreenshot Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+  [4;35;1mHighlight Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.5ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;36;1mScreenshot Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+  [4;35;1mHighlight Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.5ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.8ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mHighlight Columns (4.1ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.6ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (3.4ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.4ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (91.1ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (3.5ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.4ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.2ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (5.8ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.9ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mHighlight Load (2.3ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (92.6ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (104.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.4ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mScreenshot Load (0.6ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mHighlight Load (1.6ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (96.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mScreenshot Load (0.5ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (4.1ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mScreenshot Load (0.5ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mHighlight Load (1.4ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (5.6ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (107.2ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.7ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (4.1ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.5ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.7ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (3.5ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.9ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mScreenshot Update (0.3ms)[0m   [0mUPDATE `screenshots` SET `job_id` = 'wt49d6d9361708b' WHERE `id` = 1[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;36;1mScreenshot Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+  [4;35;1mHighlight Columns (111.5ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.9ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mScreenshot Update (0.4ms)[0m   [0;1mUPDATE `screenshots` SET `job_id` = 'wt49d6d942e10e7' WHERE `id` = 1[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (4.1ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (100.1ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mScreenshot Update (0.4ms)[0m   [0mUPDATE `screenshots` SET `job_id` = 'wt49d6d982e8f89' WHERE `id` = 1[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;36;1mScreenshot Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+  [4;35;1mHighlight Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.5ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mScreenshot Update (0.3ms)[0m   [0;1mUPDATE `screenshots` SET `job_id` = 'wt49d6da4ec11a2' WHERE `id` = 1[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (279.2ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.6ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mScreenshot Update (0.3ms)[0m   [0mUPDATE `screenshots` SET `job_id` = 'wt49d6da9f1347e' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;36;1mScreenshot Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+  [4;35;1mHighlight Columns (259.5ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.5ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mScreenshot Update (0.5ms)[0m   [0;1mUPDATE `screenshots` SET `job_id` = 'wt49d6dabb8f915' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (102.4ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.8ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mScreenshot Update (0.4ms)[0m   [0mUPDATE `screenshots` SET `job_id` = 'wt49d6dae010f43' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;36;1mScreenshot Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+  [4;35;1mHighlight Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.5ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mScreenshot Update (0.4ms)[0m   [0;1mUPDATE `screenshots` SET `job_id` = 'wt49d6dafb79f0e' WHERE `id` = 1[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.3ms)[0m   [0;1mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mHighlight Columns (268.7ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mScreenshot Update (0.3ms)[0m   [0mUPDATE `screenshots` SET `job_id` = 'wt49d6db25952f1' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mScreenshot Load (0.3ms)[0m   [0mSELECT * FROM `screenshots` LIMIT 1[0m
+  [4;36;1mScreenshot Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+  [4;35;1mHighlight Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.5ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mScreenshot Update (0.3ms)[0m   [0;1mUPDATE `screenshots` SET `job_id` = 'wt49d6db531bc71' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` [0m
+  [4;35;1mScreenshot Load (0.6ms)[0m   [0mSELECT * FROM `screenshots` [0m
+  [4;36;1mScreenshot Columns (4.6ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+  [4;35;1mHighlight Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.5ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mScreenshot Update (0.4ms)[0m   [0;1mUPDATE `screenshots` SET `job_id` = 'wt49d6dbb5a7d8b' WHERE `id` = 3[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mScreenshot Load (0.7ms)[0m   [0;1mSELECT * FROM `screenshots` [0m
+  [4;35;1mHighlight Load (1.3ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 1) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mScreenshot Update (0.4ms)[0m   [0mUPDATE `screenshots` SET `job_id` = 'wt49d6dbe90f7cf' WHERE `id` = 3[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mScreenshot Load (0.5ms)[0m   [0mSELECT * FROM `screenshots` [0m
+  [4;36;1mScreenshot Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+  [4;35;1mHighlight Columns (5.7ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.4ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mScreenshot Update (0.4ms)[0m   [0;1mUPDATE `screenshots` SET `job_id` = 'wt49d6dc11704c5' WHERE `id` = 3[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:49:12) [GET]
+  [4;36;1mHighlight Columns (11.2ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 114ms (View: 48, DB: 12) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:49:14) [GET]
+  [4;35;1mHighlight Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 17ms (View: 3, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:51:11) [GET]
+  [4;36;1mHighlight Columns (28.5ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 41ms (View: 3, DB: 29) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:51:13) [GET]
+  [4;35;1mHighlight Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 19ms (View: 2, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:51:57) [GET]
+  [4;36;1mHighlight Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 19ms (View: 3, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:51:59) [GET]
+  [4;35;1mHighlight Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 17ms (View: 3, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:52:29) [GET]
+  [4;36;1mHighlight Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 15ms (View: 2, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:53:11) [GET]
+  [4;35;1mHighlight Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 19ms (View: 3, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:53:25) [GET]
+  [4;36;1mHighlight Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 17ms (View: 2, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:53:37) [GET]
+  [4;35;1mHighlight Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 19ms (View: 2, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:54:08) [GET]
+  [4;36;1mHighlight Columns (4.1ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 20ms (View: 3, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:54:22) [GET]
+  [4;35;1mHighlight Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 17ms (View: 2, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:54:23) [GET]
+  [4;36;1mHighlight Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 18ms (View: 3, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:54:38) [GET]
+  [4;35;1mHighlight Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 21ms (View: 2, DB: 8) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:55:22) [GET]
+  [4;36;1mHighlight Columns (5.3ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 18ms (View: 3, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:55:23) [GET]
+  [4;35;1mHighlight Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 16ms (View: 3, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:55:34) [GET]
+  [4;36;1mHighlight Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 17ms (View: 3, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:55:36) [GET]
+  [4;35;1mHighlight Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 17ms (View: 3, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-04 00:55:54) [GET]
+  [4;36;1mHighlight Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 18ms (View: 2, DB: 4) | 200 OK [http://localhost/]

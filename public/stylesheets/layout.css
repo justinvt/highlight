@@ -1,7 +1,8 @@
 .field{width:100%;}
-input{margin:0 auto;padding:0.1 0.2em;width:80%;text-align:center;}
+input{margin:0 auto;padding:0.1em 0.2em;width:100%;text-align:center;border-width:0 0 1px 0;}
+#home input{background: transparent url(/images/pink.png) no-repeat center center;padding:1em;}
 .content,.screenshot{margin:60px auto auto auto;text-align:center;}
-.content{width:500px}
+.content{width:800px}
 .screenshot{width:640px;height:480px;border:solid 10px #000;}
 .curtain{width:100%;background:#000;opacity: 0.8;-moz-opacity: 0.8;filter:alpha(opacity=80);position:absolute;top:0;left:0;z-index:1;}
 #viewer .screenshot {position:relative;}

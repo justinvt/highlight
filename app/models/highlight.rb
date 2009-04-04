@@ -13,14 +13,16 @@ class Highlight < ActiveRecord::Base
   end
 
   def self.thumbnails
-    {
-      :thumb => "50x50",  
-    }
+    {:thumb => "50x50"}
+  end
+  
+  def make_tiny_url(scaped_url)
+    tu = open("http://tinyarro.ws/api-create.php?url=#{scraped_url}").read
+    update_attributes(:tiny_url=>tu)
   end
   
   def cache_image
     s = Screenshot.add(self)
-   # s.generate
   end
   
   def cache_src

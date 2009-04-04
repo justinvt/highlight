@@ -26,17 +26,18 @@ function saveCoords(c)
 	)
 		if($(".jcrop-holder .note").length == 0){
 			$(".jcrop-holder").before("<div class='url'><a href='" + l +"'>" + "share" + "</a></div>")
-			$(".jcrop-holder div").eq(0).remove(".note").append("<div class='note'><input type='text' name='note'/></div>")
+			$(".jcrop-holder div").eq(0).remove(".note").append("<div class='note'><input type='text' name='notes' class='caption'/></div>")
 			$(".note").append("<div class='arrows'><div class='arrow a1'></div><div class='arrow a2'></div><div class='arrow a3'></div><div class=' arrow a4'></div></div>")
-			$("input").keypress(function(){
-				t=true
+			$(".caption").keypress(function(e){
 				setTimeout("saveNote()",2000)
 			 })
 		}
+		$(".caption").focus()
 }
 
 $(function(){ 
 	$('#editor .' + h).Jcrop({ onSelect: saveCoords}); 
 	$("#viewer .screenshot").prepend("<div class='curtain'></div")
 	$(".curtain").height($("#viewer .screenshot").height()).width($("#viewer .screenshot").width())
+	//setTimeout("alert($('.caption').val())",10000)
 });

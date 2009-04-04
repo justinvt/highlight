@@ -17,4 +17,11 @@ module ApplicationHelper
     javascript_include_tag "min"
   end
   
+  def meta_tags
+%{
+  
+}
+  
+  end
+  
 end

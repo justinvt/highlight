@@ -2,11 +2,12 @@
 %html{"xmlns"=>"http://www.w3.org/1999/xhtml", "xml:lang"=>"en"}
   %head
     %title= page_title
+    =meta_tags
     =frontend_styles
     =editor_js
   %body#editor
   .tools
     .controls
-    %a.title{:href=>@highlight.url}= @highlight.url
-    %a.logo{:href=>root_url}= page_title
+    %a.title{:href=>@highlight.url}= (@highlight.url + "<span class='go'>⊠</span>")
+    %a.mini.logo{:href=>root_url}= page_title
   =@content_for_layout

@@ -7,6 +7,7 @@ class Screenshot < ActiveRecord::Base
   include Simplificator::Webthumb
   
   belongs_to :highlight
+  after_create :generate_tiny_url
   
   @@api_key = :dde49e22186a07b826e22770d1f78705
   @@user_id =  4461
@@ -18,6 +19,10 @@ class Screenshot < ActiveRecord::Base
                    :processor=> :rmagick,
               #   :resize_to => '700x400',
                    :thumbnails => {:thumb => "c50x50" }
+                   
+  def generate_tiny_url
+    Highlight.make_tiny_url
+  end
   
 
   

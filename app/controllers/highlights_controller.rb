@@ -25,6 +25,7 @@ class HighlightsController < ApplicationController
   # GET /highlights/1.xml
   def show
     @highlight = Highlight.find(params[:id])
+    @highlight.make_tiny_url(url_for(@highlight))
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @highlight }

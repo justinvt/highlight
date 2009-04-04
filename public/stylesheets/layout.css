@@ -1,7 +1,7 @@
 .field{width:100%;}
 input{margin:0 auto;padding:0.1 0.2em;width:80%;text-align:center;}
 .content,.screenshot{margin:60px auto auto auto;text-align:center;}
-.content{width:300px;padding:10px;border:solid 1px #ccc;}
+.content{width:500px}
 .screenshot{width:640px;height:480px;border:solid 10px #000;}
 .curtain{width:100%;background:#000;opacity: 0.8;-moz-opacity: 0.8;filter:alpha(opacity=80);position:absolute;top:0;left:0;z-index:1;}
 #viewer .screenshot {position:relative;}
@@ -20,8 +20,8 @@ input{margin:0 auto;padding:0.1 0.2em;width:80%;text-align:center;}
 .custom .jcrop-handle{border-color:#fff;background-color:#C7BB00;}
 .url{width:auto;margin:0px;padding:3px;text-align:center;font-size:0.8em;background:#111;color:#000;}
 .url a{color:#fff;}
-.canvas .note{background:#000;position:absolute;top:-5em;right:-1em;color:#fff;border:solid 2px #ff0;width:20em;}
-.canvas .note input{display:block;margin:0;background:#000;color:#fff;border:none;padding:0.5em;font-size:1em;}
+.canvas .note{background:#000;position:absolute;top:-5em;right:-1em;color:#fff;border:solid 2px #ff0;width:20em;height:2em;text-align:left;padding:0.2em;}
+.caption{background:#000;color:#fff;border:none;width:100%;padding:0;text-align:left;}
 .arrows{position:absolute;bottom:-20px;right:30px;}
 .arrow{font-size: 0px; line-height: 0%; width: 0px;}
 .a1{border-top: 20px solid #ff0;border-right: 20px solid transparent;position:absolute;bottom:0;right:0px;}

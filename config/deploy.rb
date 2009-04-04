@@ -1,7 +1,7 @@
 set :application, "highlight"
 set :rails_env, "development"
 
-set :repository,  "git://github.com/justinvt/highlight.git"
+set :repository,  "git@github.com:justinvt/highlight.git"
 
 set :scm_user, "nook"
 set :scm_verbose, true

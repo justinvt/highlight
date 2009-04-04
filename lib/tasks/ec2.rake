@@ -221,6 +221,8 @@ namespace :ec2 do
     system prep_command
   end
   
+
+  
   
   desc "Assign last unassigned ec2 IP to our instances"
   task :assign => [:environment] do

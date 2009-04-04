@@ -33,6 +33,19 @@ task :repair_image_magick, :roles=>[:app_admin] do
   sudo "gem install rmagick"
 end
 
+desc "Create a keypair to use with git"
+task :git_keygen, :roles=>[:app]  do
+  run "cd /home/app/.ssh; ssh-keygen -N '' -f id_rsa -t rsa -q"
+end
+
+desc "Show the public key to add to git"
+task :git_pubkey, :roles=>[:app] do
+  #sud "su app"
+  puts [("=" * 70), "Send this over to the github repo if you want to be able to deploy",("=" * 70)].join("\n")
+  run "echo /\n && cat /home/app/.ssh/id_rsa.pub"
+end
+  
+
 # EC2 on Rails config. 
 # NOTE: Some of these should be omitted if not needed.
 set :ec2onrails_config, {

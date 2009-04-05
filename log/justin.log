@@ -11902,3 +11902,576 @@ Rendering highlights/edit
   [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 17) LIMIT 1[0m
   [4;36;1mScreenshot Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
 Completed in 134ms (View: 115, DB: 5) | 200 OK [http://localhost/h/17/edit]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#new (for 127.0.0.1 at 2009-04-05 05:34:22) [GET]
+  [4;36;1mHighlight Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+Rendering template within layouts/home
+Rendering highlights/new
+Completed in 36ms (View: 14, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#create (for 127.0.0.1 at 2009-04-05 05:34:33) [POST]
+  Parameters: {"highlight"=>{"url"=>"nytimes.com"}}
+  [4;35;1mHighlight Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHighlight Create (0.3ms)[0m   [0mINSERT INTO `highlights` (`created_at`, `y1`, `x1`, `y2`, `notes`, `updated_at`, `url`, `x2`, `src`, `tiny_url`) VALUES('2009-04-05 09:34:33', NULL, NULL, NULL, NULL, '2009-04-05 09:34:33', 'http://nytimes.com', NULL, NULL, NULL)[0m
+  [4;36;1mScreenshot Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+  [4;35;1mScreenshot Create (0.3ms)[0m   [0mINSERT INTO `screenshots` (`size`, `content_type`, `thumbnail`, `progress`, `parent_id`, `height`, `filename`, `data_hash`, `job_id`, `highlight_id`, `width`) VALUES(908985, 'image/jpeg', NULL, NULL, NULL, 2890, '18.jpg', NULL, NULL, NULL, 800)[0m
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.`thumbnail` = 'thumb' AND `screenshots`.`parent_id` = 43) LIMIT 1[0m
+  [4;35;1mScreenshot Create (0.3ms)[0m   [0mINSERT INTO `screenshots` (`size`, `content_type`, `thumbnail`, `progress`, `parent_id`, `height`, `filename`, `data_hash`, `job_id`, `highlight_id`, `width`) VALUES(908985, 'image/jpeg', 'thumb', NULL, 43, 50, '18_thumb.jpg', NULL, NULL, NULL, 50)[0m
+  [4;36;1mScreenshot Update (0.4ms)[0m   [0;1mUPDATE `screenshots` SET `highlight_id` = 18 WHERE `id` = 43[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/h/18/edit
+Completed in 6618ms (DB: 11) | 302 Found [http://localhost/h]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#edit (for 127.0.0.1 at 2009-04-05 05:34:40) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mHighlight Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (0.3ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 18) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHighlight Update (0.4ms)[0m   [0mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:34:41', `tiny_url` = 'http://&#x27A1;.ws/ꢕ' WHERE `id` = 18[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/editor
+Rendering highlights/edit
+  [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 18) LIMIT 1[0m
+  [4;36;1mScreenshot Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+Completed in 549ms (View: 124, DB: 8) | 200 OK [http://localhost/h/18/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:34:44) [PUT]
+  Parameters: {"y1"=>"197", "x1"=>"321", "y2"=>"261", "notes"=>"on", "x2"=>"527", "id"=>"18"}
+  [4;35;1mHighlight Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (2.3ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 18) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mHighlight Update (0.3ms)[0m   [0;1mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:34:44', `notes` = 'on', `x2` = 527, `y2` = 261, `x1` = 321, `y1` = 197 WHERE `id` = 18[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Completed in 38ms (View: 12, DB: 7) | 200 OK [http://localhost/h/18.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show to json (for 127.0.0.1 at 2009-04-05 05:34:44) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mHighlight Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (0.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 18) [0m
+Completed in 22ms (View: 3, DB: 3) | 200 OK [http://localhost/h/18.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#edit (for 127.0.0.1 at 2009-04-05 05:35:05) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mHighlight Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.8ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 18) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/editor
+Rendering highlights/edit
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 18) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 406ms (View: 38, DB: 10) | 200 OK [http://localhost/h/18/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:35:08) [PUT]
+  Parameters: {"y1"=>"122", "x1"=>"258", "y2"=>"212", "notes"=>"on", "x2"=>"460", "id"=>"18"}
+  [4;36;1mHighlight Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.1ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 18) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHighlight Update (0.3ms)[0m   [0mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:35:08', `x2` = 460, `y2` = 212, `x1` = 258, `y1` = 122 WHERE `id` = 18[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 25ms (View: 2, DB: 4) | 200 OK [http://localhost/h/18.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show to json (for 127.0.0.1 at 2009-04-05 05:35:08) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mHighlight Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.3ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 18) [0m
+Completed in 23ms (View: 3, DB: 4) | 200 OK [http://localhost/h/18.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#create (for 127.0.0.1 at 2009-04-05 05:36:42) [POST]
+  Parameters: {"highlight"=>{"url"=>"nytimes.com"}}
+  [4;35;1mHighlight Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHighlight Create (0.3ms)[0m   [0mINSERT INTO `highlights` (`created_at`, `y1`, `x1`, `y2`, `notes`, `updated_at`, `url`, `x2`, `src`, `tiny_url`) VALUES('2009-04-05 09:36:42', NULL, NULL, NULL, NULL, '2009-04-05 09:36:42', 'http://nytimes.com', NULL, NULL, NULL)[0m
+  [4;36;1mScreenshot Columns (4.3ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+  [4;35;1mScreenshot Create (0.3ms)[0m   [0mINSERT INTO `screenshots` (`size`, `content_type`, `thumbnail`, `progress`, `parent_id`, `height`, `filename`, `data_hash`, `job_id`, `highlight_id`, `width`) VALUES(908985, 'image/jpeg', NULL, NULL, NULL, 2890, '19.jpg', NULL, NULL, NULL, 800)[0m
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.`thumbnail` = 'thumb' AND `screenshots`.`parent_id` = 45) LIMIT 1[0m
+  [4;35;1mScreenshot Create (0.3ms)[0m   [0mINSERT INTO `screenshots` (`size`, `content_type`, `thumbnail`, `progress`, `parent_id`, `height`, `filename`, `data_hash`, `job_id`, `highlight_id`, `width`) VALUES(908985, 'image/jpeg', 'thumb', NULL, 45, 50, '19_thumb.jpg', NULL, NULL, NULL, 50)[0m
+  [4;36;1mScreenshot Update (0.4ms)[0m   [0;1mUPDATE `screenshots` SET `highlight_id` = 19 WHERE `id` = 45[0m
+  [4;35;1mSQL (52.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/h/19/edit
+Completed in 6265ms (DB: 63) | 302 Found [http://localhost/h]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#edit (for 127.0.0.1 at 2009-04-05 05:36:49) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mHighlight Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (0.2ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHighlight Update (0.4ms)[0m   [0mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:36:49', `tiny_url` = 'http://&#x27A1;.ws/⦉' WHERE `id` = 19[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/editor
+Rendering highlights/edit
+  [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 19) LIMIT 1[0m
+  [4;36;1mScreenshot Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+Completed in 407ms (View: 35, DB: 7) | 200 OK [http://localhost/h/19/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:36:53) [PUT]
+  Parameters: {"y1"=>"75", "x1"=>"256", "y2"=>"129", "notes"=>"on", "x2"=>"554", "id"=>"19"}
+  [4;35;1mHighlight Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.6ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mHighlight Update (0.3ms)[0m   [0;1mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:36:53', `notes` = 'on', `x2` = 554, `y2` = 129, `x1` = 256, `y1` = 75 WHERE `id` = 19[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Completed in 27ms (View: 2, DB: 7) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show to json (for 127.0.0.1 at 2009-04-05 05:36:53) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mHighlight Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.3ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+Completed in 28ms (View: 4, DB: 4) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:36:57) [PUT]
+  Parameters: {"notes"=>"lo", "id"=>"19"}
+  [4;36;1mHighlight Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.7ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHighlight Update (0.3ms)[0m   [0mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:36:57', `notes` = 'lo' WHERE `id` = 19[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 26ms (View: 2, DB: 7) | 200 OK [http://localhost/h/19.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:36:57) [PUT]
+  Parameters: {"notes"=>"logo", "id"=>"19"}
+  [4;35;1mHighlight Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.3ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mHighlight Update (0.3ms)[0m   [0;1mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:36:57', `notes` = 'logo' WHERE `id` = 19[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Completed in 25ms (View: 1, DB: 7) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:36:58) [PUT]
+  Parameters: {"notes"=>"logo?", "id"=>"19"}
+  [4;36;1mHighlight Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.3ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHighlight Update (0.3ms)[0m   [0mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:36:58', `notes` = 'logo?' WHERE `id` = 19[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Completed in 26ms (View: 2, DB: 6) | 200 OK [http://localhost/h/19.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#edit (for 127.0.0.1 at 2009-04-05 05:37:32) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mHighlight Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.7ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/editor
+Rendering highlights/edit
+  [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 19) LIMIT 1[0m
+  [4;36;1mScreenshot Columns (4.1ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+Completed in 404ms (View: 38, DB: 10) | 200 OK [http://localhost/h/19/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:37:36) [PUT]
+  Parameters: {"y1"=>"76", "x1"=>"235", "y2"=>"157", "notes"=>"on", "x2"=>"582", "id"=>"19"}
+  [4;35;1mHighlight Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.7ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mHighlight Update (0.3ms)[0m   [0;1mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:37:36', `notes` = 'on', `x2` = 582, `y2` = 157, `x1` = 235, `y1` = 76 WHERE `id` = 19[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Completed in 24ms (View: 1, DB: 6) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show to json (for 127.0.0.1 at 2009-04-05 05:37:36) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mHighlight Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.3ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+Completed in 22ms (View: 3, DB: 4) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:37:41) [PUT]
+  Parameters: {"notes"=>"dsdddd", "id"=>"19"}
+  [4;36;1mHighlight Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.6ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHighlight Update (0.4ms)[0m   [0mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:37:41', `notes` = 'dsdddd' WHERE `id` = 19[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Completed in 113ms (View: 2, DB: 7) | 200 OK [http://localhost/h/19.json]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#edit (for 127.0.0.1 at 2009-04-05 05:38:33) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mHighlight Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.8ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/editor
+Rendering highlights/edit
+  [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 19) LIMIT 1[0m
+  [4;36;1mScreenshot Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+Completed in 414ms (View: 42, DB: 10) | 200 OK [http://localhost/h/19/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:38:36) [PUT]
+  Parameters: {"y1"=>"112", "x1"=>"282", "y2"=>"230", "notes"=>"on", "x2"=>"538", "id"=>"19"}
+  [4;35;1mHighlight Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (2.2ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mHighlight Update (0.3ms)[0m   [0;1mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:38:36', `notes` = 'on', `x2` = 538, `y2` = 230, `x1` = 282, `y1` = 112 WHERE `id` = 19[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Completed in 28ms (View: 2, DB: 7) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show to json (for 127.0.0.1 at 2009-04-05 05:38:36) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mHighlight Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.1ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+Completed in 21ms (View: 3, DB: 3) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-05 05:38:40) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mHighlight Columns (4.1ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.9ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+Rendering template within layouts/viewer
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 19) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 19) LIMIT 1[0m
+Completed in 68ms (View: 47, DB: 9) | 200 OK [http://localhost/h/19]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:38:49) [PUT]
+  Parameters: {"y1"=>"72", "x1"=>"260", "y2"=>"131", "notes"=>"on", "x2"=>"547", "id"=>"19"}
+  [4;35;1mHighlight Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (2.2ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mHighlight Update (0.2ms)[0m   [0;1mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:38:49', `x2` = 547, `y2` = 131, `x1` = 260, `y1` = 72 WHERE `id` = 19[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Completed in 26ms (View: 2, DB: 7) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show to json (for 127.0.0.1 at 2009-04-05 05:38:49) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mHighlight Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.2ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+Completed in 27ms (View: 4, DB: 4) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:38:52) [PUT]
+  Parameters: {"notes"=>"not good", "id"=>"19"}
+  [4;36;1mHighlight Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.5ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHighlight Update (0.3ms)[0m   [0mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:38:52', `notes` = 'not good' WHERE `id` = 19[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 26ms (View: 2, DB: 7) | 200 OK [http://localhost/h/19.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:38:53) [PUT]
+  Parameters: {"notes"=>"not good!", "id"=>"19"}
+  [4;35;1mHighlight Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (0.4ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mHighlight Update (0.3ms)[0m   [0;1mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:38:53', `notes` = 'not good!' WHERE `id` = 19[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Completed in 25ms (View: 2, DB: 4) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-05 05:39:00) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mHighlight Columns (4.3ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.6ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+Rendering template within layouts/viewer
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 19) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 19) LIMIT 1[0m
+Completed in 61ms (View: 39, DB: 8) | 200 OK [http://localhost/h/19]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#edit (for 127.0.0.1 at 2009-04-05 05:39:22) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mHighlight Columns (3.9ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.8ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/editor
+Rendering highlights/edit
+  [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 19) LIMIT 1[0m
+  [4;36;1mScreenshot Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+Completed in 397ms (View: 37, DB: 10) | 200 OK [http://localhost/h/19/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:39:25) [PUT]
+  Parameters: {"y1"=>"84", "x1"=>"254", "y2"=>"109", "notes"=>"on", "x2"=>"428", "id"=>"19"}
+  [4;35;1mHighlight Columns (6.4ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (0.9ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mHighlight Update (0.5ms)[0m   [0;1mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:39:25', `notes` = 'on', `x2` = 428, `y2` = 109, `x1` = 254, `y1` = 84 WHERE `id` = 19[0m
+  [4;35;1mSQL (50.5ms)[0m   [0mCOMMIT[0m
+Completed in 81ms (View: 2, DB: 59) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show to json (for 127.0.0.1 at 2009-04-05 05:39:25) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mHighlight Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.3ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+Completed in 27ms (View: 3, DB: 4) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#edit (for 127.0.0.1 at 2009-04-05 05:40:34) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mHighlight Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.6ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/editor
+Rendering highlights/edit
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 19) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 687ms (View: 35, DB: 10) | 200 OK [http://localhost/h/19/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:40:37) [PUT]
+  Parameters: {"y1"=>"118", "x1"=>"278", "y2"=>"176", "notes"=>"on", "x2"=>"461", "id"=>"19"}
+  [4;36;1mHighlight Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (2.2ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHighlight Update (0.3ms)[0m   [0mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:40:37', `x2` = 461, `y2` = 176, `x1` = 278, `y1` = 118 WHERE `id` = 19[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 113ms (View: 2, DB: 7) | 200 OK [http://localhost/h/19.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show to json (for 127.0.0.1 at 2009-04-05 05:40:37) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mHighlight Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (0.3ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+Completed in 19ms (View: 3, DB: 2) | 200 OK [http://localhost/h/19.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#edit (for 127.0.0.1 at 2009-04-05 05:41:02) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mHighlight Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.8ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/editor
+Rendering highlights/edit
+  [4;35;1mScreenshot Load (0.4ms)[0m   [0mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 19) LIMIT 1[0m
+  [4;36;1mScreenshot Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `screenshots`[0m
+Completed in 629ms (View: 35, DB: 10) | 200 OK [http://localhost/h/19/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:41:04) [PUT]
+  Parameters: {"y1"=>"53", "x1"=>"271", "y2"=>"162", "notes"=>"on", "x2"=>"382", "id"=>"19"}
+  [4;35;1mHighlight Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (3.1ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mHighlight Update (0.3ms)[0m   [0;1mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:41:04', `x2` = 382, `y2` = 162, `x1` = 271, `y1` = 53 WHERE `id` = 19[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Completed in 26ms (View: 2, DB: 7) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show to json (for 127.0.0.1 at 2009-04-05 05:41:04) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mHighlight Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.2ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+Completed in 19ms (View: 3, DB: 3) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#edit (for 127.0.0.1 at 2009-04-05 05:41:23) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mHighlight Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.6ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/editor
+Rendering highlights/edit
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 19) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 456ms (View: 34, DB: 10) | 200 OK [http://localhost/h/19/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:41:26) [PUT]
+  Parameters: {"y1"=>"129", "x1"=>"190", "y2"=>"179", "notes"=>"on", "x2"=>"311", "id"=>"19"}
+  [4;36;1mHighlight Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (2.1ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHighlight Update (0.2ms)[0m   [0mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:41:26', `x2` = 311, `y2` = 179, `x1` = 190, `y1` = 129 WHERE `id` = 19[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 26ms (View: 2, DB: 7) | 200 OK [http://localhost/h/19.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show to json (for 127.0.0.1 at 2009-04-05 05:41:26) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mHighlight Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (0.3ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+Completed in 104ms (View: 3, DB: 3) | 200 OK [http://localhost/h/19.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:41:39) [PUT]
+  Parameters: {"y1"=>"129", "x1"=>"190", "y2"=>"179", "notes"=>"", "x2"=>"616", "id"=>"19"}
+  [4;35;1mHighlight Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (2.3ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mHighlight Update (0.5ms)[0m   [0;1mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:41:39', `notes` = '', `x2` = 616 WHERE `id` = 19[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Completed in 28ms (View: 2, DB: 7) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show (for 127.0.0.1 at 2009-04-05 05:42:09) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mHighlight Columns (312.6ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.6ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+Rendering template within layouts/viewer
+Rendering highlights/show
+  [4;36;1mScreenshot Load (0.5ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 19) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 19) LIMIT 1[0m
+Completed in 369ms (View: 37, DB: 317) | 200 OK [http://localhost/h/19]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:42:53) [PUT]
+  Parameters: {"y1"=>"168", "x1"=>"253", "y2"=>"205", "notes"=>"on", "x2"=>"386", "id"=>"19"}
+  [4;35;1mHighlight Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (102.6ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mHighlight Update (0.3ms)[0m   [0;1mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:42:53', `notes` = 'on', `x2` = 386, `y2` = 205, `x1` = 253, `y1` = 168 WHERE `id` = 19[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Completed in 129ms (View: 2, DB: 107) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show to json (for 127.0.0.1 at 2009-04-05 05:42:53) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mHighlight Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (0.2ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+Completed in 24ms (View: 3, DB: 2) | 200 OK [http://localhost/h/19.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#edit (for 127.0.0.1 at 2009-04-05 05:42:55) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mHighlight Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (1.0ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/editor
+Rendering highlights/edit
+  [4;36;1mScreenshot Load (0.4ms)[0m   [0;1mSELECT * FROM `screenshots` WHERE (`screenshots`.highlight_id = 19) LIMIT 1[0m
+  [4;35;1mScreenshot Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `screenshots`[0m
+Completed in 393ms (View: 38, DB: 8) | 200 OK [http://localhost/h/19/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#update to json (for 127.0.0.1 at 2009-04-05 05:42:57) [PUT]
+  Parameters: {"y1"=>"121", "x1"=>"225", "y2"=>"204", "notes"=>"on", "x2"=>"500", "id"=>"19"}
+  [4;36;1mHighlight Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `highlights`[0m
+  [4;35;1mHighlight Load (2.3ms)[0m   [0mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mHighlight Update (0.4ms)[0m   [0mUPDATE `highlights` SET `updated_at` = '2009-04-05 09:42:57', `x2` = 500, `y2` = 204, `x1` = 225, `y1` = 121 WHERE `id` = 19[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 29ms (View: 2, DB: 7) | 200 OK [http://localhost/h/19.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HighlightsController#show to json (for 127.0.0.1 at 2009-04-05 05:42:57) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mHighlight Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `highlights`[0m
+  [4;36;1mHighlight Load (1.3ms)[0m   [0;1mSELECT * FROM `highlights` WHERE (`highlights`.`id` = 19) [0m
+Completed in 20ms (View: 4, DB: 4) | 200 OK [http://localhost/h/19.json]

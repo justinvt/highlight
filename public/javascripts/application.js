@@ -28,7 +28,8 @@ function saveCoords(c)
 			$(".jcrop-holder").before("<div class='url'><a href='" + l +"'>" + "share" + "</a></div>")
 			$(".jcrop-holder div").eq(0).remove(".note").append("<div class='note'><input type='text' name='notes' class='caption'/></div>")
 			$(".note").append("<div class='arrows'><div class='arrow a1'></div><div class='arrow a2'></div><div class='arrow a3'></div><div class=' arrow a4'></div></div>")
-			$(".caption").keypress(function(e){
+			$(".caption").keypress(function(){
+				t=true;
 				setTimeout("saveNote()",2000)
 			 })
 		}

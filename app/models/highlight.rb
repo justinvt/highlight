@@ -1,22 +1,24 @@
 require 'open-uri'
 require 'integer_addons'
+require 'snapcasa'
 class Highlight < ActiveRecord::Base
   
   has_many :screenshots
   
   before_validation :repair_url
-  before_create :cache_src
+  #before_create :cache_src
   after_create :cache_image
+
   
   def screenshot
     screenshots.first
   end
 
   def self.thumbnails
-    {:thumb => "50x50"}
+    {}
   end
   
-  def make_tiny_url(scaped_url)
+  def make_tiny_url(scraped_url)
     tu = open("http://tinyarro.ws/api-create.php?url=#{scraped_url}").read
     update_attributes(:tiny_url=>tu)
   end
@@ -53,6 +55,10 @@ class Highlight < ActiveRecord::Base
   
   def background_position
     [(-x1).to_px,(-y1).to_px ]
+  end
+  
+  def snapcasa
+    screenshot.snapcasa
   end
   
   

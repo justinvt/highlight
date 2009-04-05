@@ -4,6 +4,7 @@ require 'httparty'
 require 'builder'
 require 'net/http'
 require 'rexml/document'
+require 'snapcasa'
 
 class Screenshot < ActiveRecord::Base
   
@@ -28,10 +29,11 @@ class Screenshot < ActiveRecord::Base
 
 
   def self.add(highlight)
+    Snapcasa.screenshot(highlight)
     filename = "#{RAILS_ROOT}/tmp/#{highlight.id}.jpg"
-    thumb = Webthumb.new(@@api_key.to_s)
-    job = thumb.thumbnail(:url => highlight.url)
-    o = job.write_file(job.fetch_when_complete(:large), filename)
+    #thumb = Webthumb.new(@@api_key.to_s)
+    #job = thumb.thumbnail(:url => highlight.url)
+    #o = job.write_file(job.fetch_when_complete(:large), filename)
     #et = Easythumb.new(@@api_key.to_s, @@user_id.to_s)
     #et.build_url(:url => 'http://simplificator.com', :size => :full, :cache => 1)
     #raise et.inspect
@@ -59,12 +61,12 @@ class Screenshot < ActiveRecord::Base
     }
     params = 
     img = self.create({ 
-      :temp_path => o,
+      :temp_path => filename,
       :filename=>file_id, 
       :content_type=>content_types[ext]
     })
     img.update_attributes(:highlight_id=>highlight.id)
-    File.delete(o.path)
+    File.delete(filename)
   end
   
   def job_request
@@ -123,9 +125,26 @@ end
     update_attributes(:job_id=>p)
   end
   
+  def snapcasa_url
+    Snapcasa.url_for(highlight)
+  end
+  
+  def curl_command
+    Snapcasa.curl_command(highlight)
+  end
+  
+  def snapcasa
+    d = Snapcasa.screenshot(highlight)
+    #save_image(d)
+  end
+  
+  def save_image(data)
+    File.open(File.join(RAILS_ROOT,'tmp', highlight.id.to_s + '.jpg'), 'w+').puts(data)
+  end
+  
   def get_image
-   p =  via_curl(job_request)
-   File.open(File.join(RAILS_ROOT,'tmp','test.jpg'), 'w+').puts(p)
+   #save_image(via_curl(job_request))
+   snapcasa
   end
   
   def fetch_full

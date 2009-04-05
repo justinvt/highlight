@@ -28,7 +28,7 @@ function saveCoords(c)
 		if($(".jcrop-holder .note").length == 0){
 			$.getJSON(u,{},function(js){
 				tu = js["highlight"]["tiny_url"]
-				$(".jcrop-holder").before("<div class='url'><span>share</span><a href='" + tu +"'>" + tu + "</a></div>")
+				$(".jcrop-holder").before("<div class='url'><span>(</span><a title='Tiny url for sharing your highlig.ht' href='" + tu +"'>" + tu + "</a><span>)</span></div>")
 			})
 		
 			$(".jcrop-holder div").eq(0).remove(".note").append("<div class='note'><input type='text' name='notes' class='caption'/></div>")

@@ -25,8 +25,8 @@ input{margin:0 auto;padding:0;width:98%;text-align:center;background:transparent
 .custom .jcrop-hline{background:yellow;}
 .custom .jcrop-handle{border-color:#fff;background-color:#C7BB00;}
 
-.url{width:auto;margin:0px;padding:3px;text-align:center;font-size:0.8em;background:#222;color:#fff;}
-.url span{margin-right:0.5em;color:#ccc;}
+.url{width:auto;margin:0px;padding:3px;text-align:center;font-size:0.8em;background:#444;color:#fff;border-top:solid 1px #ccc;}
+.url span{margin:0 0.5em;color:#ccc;}
 .url a{color:#fff;}
 
 

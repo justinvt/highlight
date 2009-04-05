@@ -30,7 +30,7 @@ class Screenshot < ActiveRecord::Base
 
   def self.add(highlight)
     Snapcasa.screenshot(highlight)
-    filename = "#{RAILS_ROOT}/tmp/#{highlight.id}.jpg"
+    filename = "#{RAILS_ROOT}/tmp/#{highlight.id}.png"
     #thumb = Webthumb.new(@@api_key.to_s)
     #job = thumb.thumbnail(:url => highlight.url)
     #o = job.write_file(job.fetch_when_complete(:large), filename)

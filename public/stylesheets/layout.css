@@ -3,7 +3,7 @@ input{margin:0 auto;padding:0;width:98%;text-align:center;background:transparent
 #home input{background: transparent url(/images/pink.png) no-repeat center center;padding:1em;border:none;;}
 .content,.screenshot{margin:60px auto auto auto;text-align:center;}
 .content{width:800px}
-.screenshot{width:640px;height:480px;border:solid 10px #000;}
+.screenshot{width:800px;border:solid 10px #000;}
 .curtain{width:100%;background:#000;opacity: 0.8;-moz-opacity: 0.8;filter:alpha(opacity=80);position:absolute;top:0;left:0;z-index:1;}
 #viewer .screenshot {position:relative;}
 #viewer .screenshot .highlight{position:absolute;z-index:2;border:solid 2px #ff0;}

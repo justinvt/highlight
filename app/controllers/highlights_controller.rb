@@ -1,8 +1,7 @@
 class HighlightsController < ApplicationController
-  # GET /highlights
-  # GET /highlights.xml
+
   layout :layout
-  
+
   def layout
     case params[:action]
       when "new" : "home"
@@ -10,52 +9,42 @@ class HighlightsController < ApplicationController
       when "show" : "viewer"
     end
   end
-  
-  
+
   def index
     @highlights = Highlight.all
-
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.xml  { render :xml => @highlights }
     end
   end
 
-  # GET /highlights/1
-  # GET /highlights/1.xml
   def show
     @highlight = Highlight.find(params[:id])
     respond_to do |format|
-      format.html # show.html.erb
+      format.html
       format.xml  { render :xml => @highlight }
       format.json  { render :json => @highlight }
     end
   end
 
-  # GET /highlights/new
-  # GET /highlights/new.xml
   def new
     @highlight = Highlight.new
-
     respond_to do |format|
-      format.html # new.html.erb
+      format.html
       format.xml  { render :xml => @highlight }
     end
   end
 
-  # GET /highlights/1/edit
   def edit
     @highlight = Highlight.find(params[:id])
     @highlight.make_tiny_url(url_for(@highlight))
     respond_to do |format|
-      format.html # new.html.erb
+      format.html
       format.xml  { render :xml => @highlight }
       format.js  { render :json => @highlight }
     end
   end
 
-  # POST /highlights
-  # POST /highlights.xml
   def create
     @highlight = Highlight.new(params[:highlight])
     respond_to do |format|
@@ -71,14 +60,13 @@ class HighlightsController < ApplicationController
     end
   end
 
-  # PUT /highlights/1
-  # PUT /highlights/1.xml
   def update
     @highlight = Highlight.find(params[:id])
     params[:highlight] ||= {}
     params.each_pair do |k,v|
        params[:highlight][k.to_sym] = v if @highlight.class.column_names.include?(k) and k.to_sym != :id
     end
+    #@highlight.update_attributes(params[:highlight]) if params[:highlight][:from] == "ajax"
     respond_to do |format|
       if @highlight.update_attributes(params[:highlight])
         flash[:notice] = 'Highlight was successfully updated.'
@@ -95,15 +83,13 @@ class HighlightsController < ApplicationController
     end
   end
 
-  # DELETE /highlights/1
-  # DELETE /highlights/1.xml
   def destroy
     @highlight = Highlight.find(params[:id])
     @highlight.destroy
-
     respond_to do |format|
       format.html { redirect_to(highlights_url) }
       format.xml  { head :ok }
     end
   end
+
 end

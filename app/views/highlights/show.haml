@@ -1,4 +1,4 @@
-.screenshot.canvas{:style=>"background:transparent url(#{@highlight.screenshot.public_filename})"}
+.screenshot.canvas{:style=>"background:transparent url(#{@highlight.screenshot.public_filename}); width:#{@highlight.screenshot.width}px; height:#{@highlight.screenshot.height}px"}
   .highlight{:style=>"background:transparent url(#{@highlight.screenshot.public_filename});width:#{@highlight.width};height:#{@highlight.height};top:#{@highlight.top};left:#{@highlight.left};background-position:#{@highlight.background_position[0]} #{@highlight.background_position[1]}"}
     .note
       %input{:value=>"#{@highlight.notes}", :disabled=>true}

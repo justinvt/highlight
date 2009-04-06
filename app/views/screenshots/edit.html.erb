@@ -1,0 +1,12 @@
+<h1>Editing screenshot</h1>
+
+<% form_for(@screenshot) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @screenshot %> |
+<%= link_to 'Back', screenshots_path %>
